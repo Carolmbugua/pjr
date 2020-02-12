@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales PREDICTION</title>
+</head>
+<body>
+   <div class="row" style="margin-left:20px;padding-top: 40px">
+<div class="m4 w-25" style="margin-left:20px; padding-left: 20px" >
+      <form method="post" action="/predictor" name="frm">
+          <label>Select Year</label>
+        <select name="selected_year" class="form-control" form="frm" required>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+          <br>
+        <label>Expected Quantity</label><input name="exp_quantity" type="number" required>
+        <label>Expected Stock</label><input name="exp_stock" type="number" required>
+        <label>Total product sold</label><input name="Total_product_sold" type="number" required>
+        <label>buying price</label><input name="exp_total_bp" type="number" required>
+        <label>selling price</label><input name="exp_total_sp" type="number" required>
+
+        <input type="submit" />
+    </form>
+</div>
+<div class="container w-50">
+			<embed type="image/svg+xml" src={{graph_data|safe}} style='max-width:1000px'/>
+</div></div>
+
+</body>
+</html>
